@@ -9,8 +9,10 @@ html {
   --color-success: #00C853;
   --color-action-tertiary-stroke: #8B919B;
   --color-disabled: rgba(0, 0, 0, 0.26);
+  --color-border: #E4E7EC;
+  --color-caption: #8B919B;
   font-family: 'Poppins', serif;
-  font-weight: 600;
+  font-weight: 400;
   font-style: normal;
 }
 
