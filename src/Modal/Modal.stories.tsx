@@ -18,7 +18,7 @@ export default {
 
 export const Default = {
   args: {
-    children: 'I am a Melio Modal!',
+    children: <div style={{ padding: 8 }}>I am a Melio Modal!</div>,
   }
 };
 

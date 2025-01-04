@@ -14,7 +14,7 @@ TODO:
 
 export const Button = ({
   children = 'I am a Melio button!',
-  onChange,
+  onClick,
   disabled,
   variant = 'text',
   color = 'primary',
@@ -23,7 +23,7 @@ export const Button = ({
   fullWidth,
 }: {
   children: ReactNode,
-  onChange?: () => void,
+  onClick?: () => void,
   disabled?: boolean,
   startIcon?: ReactNode,
   endIcon?: ReactNode,
@@ -42,7 +42,7 @@ export const Button = ({
   return (
     <button
       className={className}
-      onClick={onChange}
+      onClick={onClick}
       disabled={disabled}
     >
       {startIcon && <span className="melio-btn-text-with-icon melio-btn-start-icon">{startIcon}</span>}

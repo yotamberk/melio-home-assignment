@@ -4,7 +4,7 @@ import './Card.css';
 export const Card = (
   { 
     children, 
-    variant,
+    variant = 'outlined',
   }: 
   { 
     variant?: 'outlined' | 'raised',

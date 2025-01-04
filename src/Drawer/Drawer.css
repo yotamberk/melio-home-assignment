@@ -1,2 +1,54 @@
 .melio-drawer {
+  height: 100%;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  right: -100%;
+  position: absolute;
+}
+
+.melio-drawer-header-text {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.melio-drawer-open {
+  right: 0;
+}
+
+.melio-drawer-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.melio-drawer-backdrop-open {
+ opacity: 1;
+  z-index: 0;
+  visibility: visible;
+}
+
+.melio-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media only screen and (max-width: 500px) {
+  .melio-drawer {
+    width: 100%;
+  }
+  .melio-drawer-backdrop {
+    display: none;
+  }
 }
