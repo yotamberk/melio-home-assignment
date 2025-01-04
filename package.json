@@ -1,7 +1,7 @@
 {
   "name": "home-assignment",
   "version": "1.0.0",
-  "description": "Penny's home assignment's repository.",
+  "description": "Melio's home assignment's repository.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
