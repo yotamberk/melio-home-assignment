@@ -33,7 +33,6 @@ export const Default = {
         <Drawer {...args} open={open} onClose={onChange} />
       </div>
     );
-    
   },
   args: {
     open: false,

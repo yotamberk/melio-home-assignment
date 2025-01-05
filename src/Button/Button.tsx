@@ -9,7 +9,7 @@ TODO:
 - split icon button into separate component
 - support for different sizes
 - support for loading state
-- add tests
+- pass custom style as props?
 */
 
 export const Button = ({
@@ -21,6 +21,7 @@ export const Button = ({
   startIcon,
   endIcon,
   fullWidth,
+  width,
 }: {
   children: ReactNode,
   onClick?: () => void,
@@ -30,6 +31,7 @@ export const Button = ({
   variant?: 'text' | 'outlined' | 'contained',
   color?: 'primary' | 'secondary' | 'error' | 'success',
   fullWidth?: boolean,
+  width?: React.CSSProperties['width']
 }) => {
   const className = [
     'melio-btn', `melio-btn-${variant}`,
@@ -44,6 +46,7 @@ export const Button = ({
       className={className}
       onClick={onClick}
       disabled={disabled}
+      style={width ? { width } : undefined}
     >
       {startIcon && <span className="melio-btn-text-with-icon melio-btn-start-icon">{startIcon}</span>}
       {children}

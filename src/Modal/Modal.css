@@ -1,2 +1,50 @@
 .melio-modal {
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  padding: 16px;
+  display: flex;
+  flex-direction: column  ;
+  gap: 16px;
+}
+
+.melio-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.melio-modal-footer {
+  display: flex;
+  justify-content:  space-between;
+  align-items: center;
+}
+
+@media only screen and (min-width: 500px) {
+  .melio-modal {
+    transform: translate(50%, 0);
+    top: -100%;
+    right: 50%;
+  }
+
+  .melio-modal-open {
+    right: 50%;
+    top: 20px;
+    transform: translate(50%, 0);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+   .melio-modal {
+    right: 0;
+    width: 100%;
+    bottom: -100%;
+  }
+  .melio-modal-open {
+    bottom: 0;
+  }
+
+  .melio-modal-backdrop {
+    display: none;
+  }
 }
