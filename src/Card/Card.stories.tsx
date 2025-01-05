@@ -1,3 +1,4 @@
+import { Button } from '../Button';
 import { Card } from './Card';
 import React from 'react';
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -18,7 +19,9 @@ export default {
 
 export const Default = {
   args: {
-    children: 'I am a Melio card!',
+    title: 'I am a Melio card!',
+    caption: 'I am a Melio card caption!',
+    action: <Button variant='contained'>Action</Button>,
   }
 };
 

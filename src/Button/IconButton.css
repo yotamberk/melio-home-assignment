@@ -1,0 +1,14 @@
+.melio-btn.melio-btn-type-icon {
+  border: 1px solid var(--color-action-tertiary-stroke);
+}
+
+.melio-btn.melio-btn-disabled {
+  border-color: var(--color-disabled);
+  color:  var(--color-disabled);
+}
+
+@media only screen and (max-width: 500px) {
+  .melio-btn.melio-btn-type-icon {
+    border: none;
+  }
+}

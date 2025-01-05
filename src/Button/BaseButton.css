@@ -1,0 +1,93 @@
+.melio-btn {
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.melio-btn.melio-btn-text-only {
+  padding: 8px 16px;
+}
+
+.melio-btn:hover:not(.melio-btn-disabled) {
+  opacity: 0.7;
+}
+
+.melio-btn.melio-btn-disabled {
+  color:  var(--color-disabled);
+}
+
+.melio-btn-text {
+  color: black;
+}
+
+.melio-btn-contained.melio-btn-primary:not(.melio-btn-disabled) {
+  background-color: var(--color-primary);
+  color: white; 
+}
+
+.melio-btn-contained.melio-btn-secondary:not(.melio-btn-disabled) {
+  background-color: var(--color-secondary);
+}
+
+.melio-btn-contained.melio-btn-error:not(.melio-btn-disabled) {
+  background-color: var(--color-error);
+  color: white; 
+}
+
+.melio-btn-contained.melio-btn-success:not(.melio-btn-disabled) {
+  background-color: var(--color-success);
+}
+
+.melio-btn-contained.melio-btn-disabled {
+  background-color: var(--color-disabled);
+}
+
+.melio-btn-contained path {
+  color: white;
+  fill: white
+}
+
+.melio-btn-outlined {
+  border: 1px solid var(--color-action-tertiary-stroke);
+}
+
+.melio-btn-outlined.melio-btn-disabled {
+  border-color: var(--color-disabled);
+  color:  var(--color-disabled);
+}
+
+.melio-btn-disabled {
+  cursor: initial;
+  color: var(--color-disabled);
+}
+.melio-btn-disabled path {
+  fill: var(--color-disabled);
+}
+
+.melio-btn-start-icon {
+  margin-right: 8px;
+}
+
+.melio-btn-end-icon {
+  margin-left: 8px;
+}
+
+.melio-btn-fullWidth {
+  width: 100%;
+}
+
+.melio-btn-size-small {
+  padding: 4px 8px;
+}
+
+.melio-btn-size-medium {
+  padding: 8px 16px;
+}
+
+.melio-btn-size-large {
+  padding: 12px 24px;
+}

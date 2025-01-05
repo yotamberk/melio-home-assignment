@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react';
 import '../styles.css';
 
-import './Button.css';
-import { BaseButton } from './BaseButton';
+import './BaseButton.css';
 
 /* 
 TODO: 
@@ -13,43 +12,45 @@ TODO:
 - pass custom style as props?
 */
 
-export const Button = ({
-  children = 'I am a Melio button!',
+export const BaseButton = ({
+  children,
   onClick,
   disabled,
   variant = 'text',
-  color = 'primary',
   size = 'medium',
-  startIcon,
-  endIcon,
+  color,
+  type,
   fullWidth,
   width,
 }: {
   children: ReactNode,
   onClick?: () => void,
   disabled?: boolean,
-  startIcon?: ReactNode,
-  endIcon?: ReactNode,
-  size?: 'small' | 'medium' | 'large',
+  type: 'button' | 'icon',
+  size: 'small' | 'medium' | 'large',
   variant?: 'text' | 'outlined' | 'contained',
   color?: 'primary' | 'secondary' | 'error' | 'success',
   fullWidth?: boolean,
   width?: React.CSSProperties['width']
 }) => {
+  const className = [
+    'melio-btn', `melio-btn-${variant}`, 
+    `melio-btn-type-${type}`,
+    type === 'button' && `melio-btn-size-${size}`,
+    color && `melio-btn-${color}`,
+    typeof children === 'string' && `melio-btn-text-only`, 
+    disabled && `melio-btn-disabled`, 
+    fullWidth && `melio-btn-fullWidth`
+  ].filter(Boolean).join(' ');
+
   return (
-    <BaseButton
+    <button
+      className={className}
       onClick={onClick}
       disabled={disabled}
-      variant={variant}
-      color={color}
-      fullWidth={fullWidth}
-      width={width}
-      size={size}
-      type='button'
+      style={width ? { width } : undefined}
     >
-      {startIcon && <span className="melio-btn-text-with-icon melio-btn-start-icon">{startIcon}</span>}
       {children}
-      {endIcon && <span className="melio-btn-text-with-icon melio-btn-end-icon">{endIcon}</span>}
-    </BaseButton>
+    </button>
   );
 };

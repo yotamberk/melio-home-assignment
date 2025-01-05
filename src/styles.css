@@ -11,6 +11,8 @@ html {
   --color-disabled: rgba(0, 0, 0, 0.26);
   --color-border: #E4E7EC;
   --color-caption: #8B919B;
+  --color-text-primary: black;
+  --color-text-secondary: #646F87;
   font-family: 'Poppins', serif;
   font-weight: 400;
   font-style: normal;

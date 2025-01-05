@@ -1,7 +1,13 @@
 .melio-card {
   border-radius: 8px;
-  padding: 16px;
   width: 100%;
+}
+
+.melio-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 24px;
 }
 
 .melio-card-outlined {
@@ -10,4 +16,28 @@
 
 .melio-card-raised {
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.melio-card-content {
+  flex: 1;
+}
+
+.melio-card-title {
+  font-weight: 500;
+}
+
+.melio-card-caption {
+  color: var(--color-text-secondary);
+}
+
+.melio-card-action {
+ display: flex;
+ justify-content: flex-end;
+ align-items: flex-start;
+}
+
+@media  only screen and (max-width: 500px) {
+  .melio-card-action {
+    flex: 1;
+  }
 }
