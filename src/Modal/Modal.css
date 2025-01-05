@@ -2,22 +2,40 @@
   background-color: white;
   transition: all 0.3s ease-in-out;
   position: absolute;
-  padding: 16px;
+}
+
+.melio-modal-container {
   display: flex;
   flex-direction: column  ;
-  gap: 16px;
 }
 
 .melio-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+  gap: 16px;
+}
+
+.melio-modal-header-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.melio-modal-close {
+  margin-left: auto;
 }
 
 .melio-modal-footer {
   display: flex;
   justify-content:  space-between;
   align-items: center;
+  gap: 16px;
+  padding: 16px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -27,19 +45,42 @@
     right: 50%;
   }
 
+  .melio-modal-header {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .melio-modal-content {
+    padding: 8px 24px;
+  }
+
   .melio-modal-open {
     right: 50%;
     top: 20px;
     transform: translate(50%, 0);
   }
+
+  .melio-modal-footer {
+    padding: 24px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-   .melio-modal {
+  .melio-modal {
     right: 0;
     width: 100%;
     bottom: -100%;
   }
+
+  
+  .melio-modal-header {
+    padding: 16px;
+  }
+
+  .melio-modal-content {
+    padding: 16px;
+  }
+
   .melio-modal-open {
     bottom: 0;
   }
